@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Chicken{% endblock title %}
+{% block content %}
+<h1>鶏肉があるならこちらのメニューはいかがですか？</h1>
+<ul>
+  <li>
+    <img src="{% static 'images/nanbann.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>チキン南蛮</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/pyako.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>親子丼</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/karage.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>唐揚げ</strong>
+  </li>
+</ul>
+<form action="/polls/home" method="post">
+  {% csrf_token %}
+  <button type="submit" name="button">Go Home</button>
+</form>
+{% endblock content %}

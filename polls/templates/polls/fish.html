@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Fish{% endblock title %}
+{% block content %}
+<h1>魚があるならこちらのメニューはいかがですか？</h1>
+<ul>
+  <li>
+    <img src="{% static 'images/yaki.png' %}" alt="" width="500px" height="500px"><br>
+    <strong>焼き魚</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/muniel.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>ムニエル</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/aqua.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>アクアパッツァ</strong>
+  </li>
+</ul>
+<form action="/polls/home" method="post">
+  {% csrf_token %}
+  <button type="submit" name="button">Go Home</button>
+</form>
+{% endblock content %}

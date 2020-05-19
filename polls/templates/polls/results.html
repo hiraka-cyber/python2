@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Answer{% endblock title %}
+{% block content %}
+<h1>HOT LEMON</h1>
+<img src="{% static 'images/hotlemon.png' %}" alt="" width="100%" height="100%">
+<form class="" action="/polls/index" method="post">
+  {% csrf_token %}
+  <button type="submit" name="button">Back HoME</button>
+</form>
+{% endblock content %}

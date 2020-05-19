@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Meat{% endblock title %}
+{% block content %}
+<h1>豚肉があるならこちらのメニューはどうですか？</h1>
+<ul>
+  <li>
+    <img src="{% static 'images/syoga.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>生姜焼き</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/butasya.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>豚しゃぶ</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/mosasi.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>モヤシ炒め</strong>
+  </li>
+</ul>
+<form action="/polls/home" method="post">
+  {% csrf_token %}
+  <button type="submit" name="button">Go Home</button>
+</form>
+{% endblock content %}

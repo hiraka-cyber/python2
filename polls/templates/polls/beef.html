@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Beef{% endblock title %}
+{% block content %}
+<h1>牛肉があるならこちらのメニューはどうですか？</h1>
+<ul>
+  <li>
+    <img src="{% static 'images/gyudon.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>牛丼</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/loastbeef.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>ローストビーフ</strong>
+  </li>
+  <li>
+    <img src="{% static 'images/beefst.png' %}" alt=""width="500px" height="500px"><br>
+    <strong>ビーフストロガノフ</strong>
+  </li>
+</ul>
+<form action="/polls/home" method="post">
+  {% csrf_token %}
+  <button type="submit" name="button">Go Home</button>
+</form>
+{% endblock content %}

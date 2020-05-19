@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}What do you want to drink?{% endblock title %}
+{% block content %}
+<h1>朝は何を飲む？</h1>
+<h2>調子はどうだい？</h2>
+<form action="/polls/detail" method="post">
+  {% csrf_token %}
+  <label>まだ眠いそこの君へ！</label>
+  <button type="submit" name="button">Click me</button>
+</form>
+<form action="/polls/results" method="post">
+  {% csrf_token %}
+  <label>朝は寒いよ~と感じている君へ</label>
+  <button type="submit" name="button">Click me</button>
+</form>
+<form action="/polls/good" method="post">
+  {% csrf_token %}
+  <label>朝から熱くてたまらないよ～！と朝から元気いっぱいな君へ</label>
+  <button type="submit" name="button">Click me</button>
+</form>
+
+<a href="/polls/home">Food Link</a>
+{% endblock content %}

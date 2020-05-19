@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}What's in the refrigerator?{% endblock title %}
+{% block content %}
+<h1>今日はどんな料理を作る？</h1>
+<h2>さあ！冷蔵庫をあけて何があるかな？下のボタンに飛ぶと、<br>ある食材の中から簡単に作れるものを紹介するよ！</h2>
+
+<form action="/polls/meet" method="post">
+  {% csrf_token %}
+  <label>豚肉はあるよ！</label>
+  <button type="submit" name="button">Click Me</button>
+</form>
+
+<form action="/polls/beef" method="post">
+  {% csrf_token %}
+  <label>牛肉はあるよ！</label>
+  <button type="submit" name="button">Click Me</button>
+</form>
+
+<form action="/polls/chicken" method="post">
+  {% csrf_token %}
+  <label>鶏肉はあるよ！</label>
+  <button type="submit" name="button">Click Me</button>
+</form>
+
+<form action="/polls/fish" method="post">
+  {% csrf_token %}
+  <label>魚はあるよ！</label>
+  <button type="submit" name="button">Click Me</button>
+</form>
+
+<a href="/polls/index">Drink Link</a>
+{% endblock content %}
