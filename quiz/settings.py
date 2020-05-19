@@ -26,7 +26,7 @@ SECRET_KEY = '*m!lnk=!i(85cx6p46jlqd-9tj3l#n4j^=3f=cue5@+9z5y)e9'
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
