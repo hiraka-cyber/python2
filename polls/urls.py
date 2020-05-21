@@ -3,6 +3,7 @@ from . import views
 
 app_name = 'polls'
 urlpatterns = [
+   path('',views.all,name='all'),
    path('index',views.index,name='index'),
    path('detail',views.detail,name='detail'),
    path('results',views.results,name="results"),
@@ -12,5 +13,4 @@ urlpatterns = [
    path('chicken',views.chicken,name="chicken"),
    path('fish',views.fish,name="fish"),
    path('home',views.home,name='home'),
-   path('',views.all,name='all'),
 ]
